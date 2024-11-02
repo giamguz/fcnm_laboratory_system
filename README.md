@@ -39,6 +39,17 @@ To avoid CORS issues in development, add a proxy in the client/package.json file
 }
 ```
 ## Scripts to Run Both Servers
+
+Open file "package.json"<br>
+```json
+"scripts": {
+  "start": "node server.js",
+  "client": "cd client && npm start",
+  "dev": "concurrently \"npm run start\" \"npm run client\""
+}
+
+```
+
 Open file "client/package.jon"<br>
 Change the startup script to include the NODE_OPTIONS variable with the value --openssl-legacy-provider:<br>
 ```json
@@ -49,16 +60,7 @@ Change the startup script to include the NODE_OPTIONS variable with the value --
   "eject": "react-scripts eject"
 }
 ```
-Open file "package.json"<br>
-```json
-// package.json
-"scripts": {
-  "start": "node server.js",
-  "client": "cd client && npm start",
-  "dev": "concurrently \"npm run start\" \"npm run client\""
-}
 
-```
 Then, install concurrently to run both servers together:<br>
 ```bash
 npm install concurrently
