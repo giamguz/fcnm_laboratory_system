@@ -1,0 +1,20 @@
+{
+  "name": "fcnm_laboratory_system",
+  "version": "1.0.0",
+  "description": "Computer loan system for Espol students in the laboratories of the FCNM faculty, registration of teaching assistant hours for assistants.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run start\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^9.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
+  }
+}
